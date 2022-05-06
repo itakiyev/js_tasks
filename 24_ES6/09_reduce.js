@@ -16,13 +16,13 @@ console.log(total);
 // Example 2
 const arr = ["apple", "banana", "peach", "orange"];
 
-// let fruits = arr.reduce((acc, elem) => {
-//   console.log("acc: ", acc);
-//   acc[elem] = 1;
-//   return acc;
-// }, {});
+let fruits = arr.reduce((acc, elem) => {
+  console.log("acc: ", acc);
+  acc[elem] = 1;
+  return acc;
+}, {});
 
-// console.log(fruits);
+console.log(fruits);
 
 // Посчитать сколько повторяющихся фруктов в массиве
 
