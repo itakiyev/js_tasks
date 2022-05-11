@@ -1,9 +1,9 @@
 /**
  * Итераторы
- * 
+ *
  * Обработка каждого элемента коллекции.
- * 
- * Объект является итератором, если он умеет обращаться к элементам коллекции по одному за раз, 
+ *
+ * Объект является итератором, если он умеет обращаться к элементам коллекции по одному за раз,
  * при этом отслеживая своё текущее положение внутри этой последовательности.
  */
 
@@ -32,10 +32,10 @@
 
 /**
  * Генераторы
- * 
- * это специальный тип функции, который работает как фабрика итераторов. 
+ *
+ * это специальный тип функции, который работает как фабрика итераторов.
  * Функция становится генератором, если содержит один или более yield операторов и использует function* синтаксис.
- * 
+ *
  * (ключевое слово function со звёздочкой) определяет функцию-генератор.
  */
 
@@ -51,16 +51,59 @@
 // console.log(it.next().value); // 1
 // console.log(it.next().value); // 2
 
-function* gen(a, b) {
-    let sum = a + b;
-    yield sum;
-    yield sum += b;
-    yield sum += b;
-    return sum + b;
-}
+//------------------------------------
 
-let g = gen(2, 3);
-console.log(g.next()); //value = 5, done = false
-console.log(g.next()); //value = 8, done = false
-console.log(g.next()); //value = 11, done = false
-console.log(g.next()); //value = 14, done = true
+// function* strGenerator() {
+//     yield 'H';
+//     yield 'E';
+//     yield 'L';
+//     yield 'L';
+//     yield 'O';
+// }
+
+// const str = strGenerator();
+
+//------------------------------------
+
+// function* numberGen(n = 10) {
+//   for (let i = 0; i < n; i++) {
+//     yield i;
+//   }
+// }
+
+// const num = numberGen(7);
+// console.log(num.next());
+// console.log(num.next());
+
+//------------------------------------
+
+const iterator = {
+  gen(n = 10) {
+    let i = 0;
+    return {
+      next() {
+        if (i < n) {
+          return {
+            value: ++i,
+            done: false,
+          };
+        }
+        return { value: undefined, done: true };
+      },
+    };
+  },
+};
+
+// function* gen(a, b) {
+//     let sum = a + b;
+//     yield sum;
+//     yield sum += b;
+//     yield sum += b;
+//     return sum + b;
+// }
+
+// let g = gen(2, 3);
+// console.log(g.next()); //value = 5, done = false
+// console.log(g.next()); //value = 8, done = false
+// console.log(g.next()); //value = 11, done = false
+// console.log(g.next()); //value = 14, done = true
