@@ -37,38 +37,38 @@
 //     }, 2000)
 // })
 
-// p.then((data) => {
-//     const p2 = new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             data.modified = true;
-//             resolve(data)
-//         }, 2000)
-//     })
+p.then((data) => {
+    const p2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            data.modified = true;
+            resolve(data)
+        }, 2000)
+    })
 
-//     p2.then(clientData => {
-//         console.log('Data received', clientData)
-//     })
-// })
+    p2.then(clientData => {
+        console.log('Data received', clientData)
+    })
+})
 
 // Improved promise then
-// p.then((data) => {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => {
-//             data.modified = true;
-//             // reject(data)
-//             resolve(data)
-//         }, 2000)
-//     })
-//     .then((clientData) => {
-//         console.log('Data received', clientData)
-//         clientData.fromPromise = true;
-//         return clientData;
-//     }).then(data => {
-//         console.log('Modified', data)
-//     })
-//     .catch(err => console.error('Error: ',err))
-//     .finally(() => console.log('Finally'))
-// })
+p.then((data) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            data.modified = true;
+            // reject(data)
+            resolve(data)
+        }, 2000)
+    })
+        .then((clientData) => {
+            console.log('Data received', clientData)
+            clientData.fromPromise = true;
+            return clientData;
+        }).then(data => {
+            console.log('Modified', data)
+        })
+        .catch(err => console.error('Error: ', err))
+        .finally(() => console.log('Finally'))
+})
 
 /**
  * Example #3
