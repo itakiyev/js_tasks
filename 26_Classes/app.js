@@ -1,1 +1,0 @@
-// http://jsraccoon.ru/es6-classes
