@@ -1,3 +1,5 @@
+// https://marina-ferreira.github.io/tutorials/js/memory-game/
+
 const cards = document.querySelectorAll('.memory-card');
 
   let hasFlippedCard = false;
