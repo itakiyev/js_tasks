@@ -32,3 +32,20 @@ console.log(findSum(0, 3, 9, 2), 14, "0+3+9+2 = 14")
 console.log(findSum(), 0, "If no arguments, function should return 0")
 console.log(findSum(1, -2, 4), -1, "If negative arguments are passed, function should return -1")
 console.log(findSum(0), 0, "The sum of 0 is 0")
+
+
+/**
+ * Округлить его до следующего (то есть «большего») числа, кратного 5
+ * 
+ * input:    output:
+    0    ->   0
+    2    ->   5
+    3    ->   5
+    12   ->   15
+    21   ->   25
+    30   ->   30
+    -2   ->   0
+    -5   ->   -5
+    и тд.
+ */
+
