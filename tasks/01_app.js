@@ -6,7 +6,7 @@
     ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
  */
 
-function findSum() {
+function removeEveryOther() {
     //code here
 }
 
@@ -23,7 +23,7 @@ console.log(removeEveryOther([['Goodbye'], { 'Great': 'Job' }]), [['Goodbye']]);
  * если аргументы отрицательные, она должна вернуть -1.
  */
 
-function removeEveryOther(arr) {
+function findSum(arr) {
     //your code here
 }
 
