@@ -1,4 +1,6 @@
-APIs: 
+# API практика
+
+#APIs: 
 
  - GET:       https://6296e8c014e756fe3b254bdd.mockapi.io/api/v1/users - GET all users / Получить всех юзеров
  - GET:       https://6296e8c014e756fe3b254bdd.mockapi.io/api/v1/users/:id - GET single user / Получить одного юзера по его ID
