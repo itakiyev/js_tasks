@@ -14,14 +14,14 @@ APIs:
 3/ Создать CRUD функции - Создать/Обновить/Удалить
     3.1/ Создать кнопку "Добавить" вне таблицы (правый верхний угол), 
         после нажатия открывается форма создания юзера с инпутами:
-        - city (string)
-        - country (string)
-        - email (string)
-        - firstName (string)
-        - lastName (string)
-        - phone (string)
-        - zip (string)
-        - status (boolean)
+- city (string)
+- country (string)
+- email (string)
+- firstName (string)
+- lastName (string)
+- phone (string)
+- zip (string)
+- status (boolean)
     В форме будет кнопка сохранить, после успешного сохранения, переходите обратно на страницу таблицы
 
     3.2/ Добавить иконку "карандашика" на каждую строку таблицы, 
